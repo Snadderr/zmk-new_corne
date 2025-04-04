@@ -126,7 +126,7 @@
 
         macro_grave: macro_grave {
             compatible = "zmk,behavior-macro";
-            label = "Macro: `";
+            label = "Macro: \`";
             bindings = <&str "`">;
         };
 
@@ -156,13 +156,13 @@
 
         macro_pipe: macro_pipe {
             compatible = "zmk,behavior-macro";
-            label = "Macro: |";
+            label = "Macro: \|";
             bindings = <&str "|">;
         };
 
         macro_tilde: macro_tilde {
             compatible = "zmk,behavior-macro";
-            label = "Macro: ~";
+            label = "Macro: \~";
             bindings = <&str "~">;
         };
     };
