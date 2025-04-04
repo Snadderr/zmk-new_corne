@@ -33,25 +33,141 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
-    };
 
-    rgb_encoder: rgb_encoder {
-        compatible = "zmk,behavior-sensor-rotate";
-        #sensor-binding-cells = <0>;
-        bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
-    };
+        macro_excl: macro_excl {
+            compatible = "zmk,behavior-macro";
+            label = "Macro: !";
+            bindings = <&str "!">;
+        };
 
-    scroll_encoder: scroll_encoder {
-        compatible = "zmk,behavior-sensor-rotate";
-        #sensor-binding-cells = <0>;
-        bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+        macro_at: macro_at {
+            compatible = "zmk,behavior-macro";
+            label = "Macro: @";
+            bindings = <&str "@">;
+        };
 
-        tap-ms = <100>;
+        macro_hash: macro_hash {
+            compatible = "zmk,behavior-macro";
+            label = "Macro: #";
+            bindings = <&str "#">;
+        };
+
+        macro_dollar: macro_dollar {
+            compatible = "zmk,behavior-macro";
+            label = "Macro: $";
+            bindings = <&str "$">;
+        };
+
+        macro_percent: macro_percent {
+            compatible = "zmk,behavior-macro";
+            label = "Macro: %";
+            bindings = <&str "%">;
+        };
+
+        macro_caret: macro_caret {
+            compatible = "zmk,behavior-macro";
+            label = "Macro: ^";
+            bindings = <&str "^">;
+        };
+
+        macro_amp: macro_amp {
+            compatible = "zmk,behavior-macro";
+            label = "Macro: &";
+            bindings = <&str "&">;
+        };
+
+        macro_star: macro_star {
+            compatible = "zmk,behavior-macro";
+            label = "Macro: *";
+            bindings = <&str "*">;
+        };
+
+        macro_lpar: macro_lpar {
+            compatible = "zmk,behavior-macro";
+            label = "Macro: (";
+            bindings = <&str "(">;
+        };
+
+        macro_rpar: macro_rpar {
+            compatible = "zmk,behavior-macro";
+            label = "Macro: )";
+            bindings = <&str ")">;
+        };
+
+        macro_minus: macro_minus {
+            compatible = "zmk,behavior-macro";
+            label = "Macro: -";
+            bindings = <&str "-">;
+        };
+
+        macro_equal: macro_equal {
+            compatible = "zmk,behavior-macro";
+            label = "Macro: =";
+            bindings = <&str "=">;
+        };
+
+        macro_lbkt: macro_lbkt {
+            compatible = "zmk,behavior-macro";
+            label = "Macro: [";
+            bindings = <&str "[">;
+        };
+
+        macro_rbkt: macro_rbkt {
+            compatible = "zmk,behavior-macro";
+            label = "Macro: ]";
+            bindings = <&str "]">;
+        };
+
+        macro_bslh: macro_bslh {
+            compatible = "zmk,behavior-macro";
+            label = "Macro: \\";
+            bindings = <&str "\\">;
+        };
+
+        macro_grave: macro_grave {
+            compatible = "zmk,behavior-macro";
+            label = "Macro: `";
+            bindings = <&str "`">;
+        };
+
+        macro_under: macro_under {
+            compatible = "zmk,behavior-macro";
+            label = "Macro: _";
+            bindings = <&str "_">;
+        };
+
+        macro_plus: macro_plus {
+            compatible = "zmk,behavior-macro";
+            label = "Macro: +";
+            bindings = <&str "+">;
+        };
+
+        macro_lbrc: macro_lbrc {
+            compatible = "zmk,behavior-macro";
+            label = "Macro: {";
+            bindings = <&str "{">;
+        };
+
+        macro_rbrc: macro_rbrc {
+            compatible = "zmk,behavior-macro";
+            label = "Macro: }";
+            bindings = <&str "}">;
+        };
+
+        macro_pipe: macro_pipe {
+            compatible = "zmk,behavior-macro";
+            label = "Macro: |";
+            bindings = <&str "|">;
+        };
+
+        macro_tilde: macro_tilde {
+            compatible = "zmk,behavior-macro";
+            label = "Macro: ~";
+            bindings = <&str "~">;
+        };
     };
 
     keymap {
-        compatible = "zmk,keymap";
-
         default_layer {
             display-name = "QWERTY";
             bindings = <
@@ -77,12 +193,11 @@
         };
 
         raise_layer {
-            display-name = "SYMBOL";
             bindings = <
-&bt BT_NXT       &kp EXCL         &kp AT           &kp HASH         &kp DLLR         &kp PRCNT                                                 &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&bt BT_PRV       &bt BT_CLR       &mkp LCLK        &mkp MCLK        &mkp RCLK        &mkp MB4                                  &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&rgb_ug RGB_TOG  &rgb_ug RGB_SPI  &rgb_ug RGB_SPD  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_COLOR_HSB(185,0,0)  &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                                                   &trans           &trans           &kp SPACE                                                                                  &kp RET    &trans     &trans
+                &bt BT_NXT       &macro_excl     &macro_at       &macro_hash     &macro_dollar   &macro_percent                                              &mmv MOVE_UP               &macro_caret   &macro_amp     &macro_star    &macro_lpar  &macro_rpar  &kp BSPC
+                &bt BT_PRV       &bt BT_CLR       &mkp LCLK        &mkp MCLK        &mkp RCLK        &mkp MB4                                 &mmv MOVE_LEFT  &mkp LCLK     &mmv MOVE_RIGHT &macro_minus  &macro_equal  &macro_lbkt   &macro_rbkt  &macro_bslh  &macro_grave
+                &rgb_ug RGB_TOG  &rgb_ug RGB_SPI  &rgb_ug RGB_SPD  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_COLOR_HSB(185,0,0) &trans               &mmv MOVE_DOWN            &macro_under  &macro_plus   &macro_lbrc   &macro_rbrc  &macro_pipe  &macro_tilde
+                                           &trans           &trans           &kp SPACE                                                                             &kp RET    &trans     &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
