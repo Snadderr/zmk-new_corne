@@ -49,6 +49,15 @@
         tap-ms = <100>;
     };
 
+    macros {
+        exclamation: exclamation {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RALT &kp N8>;
+            label = "EXCLAMATION";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -79,9 +88,9 @@
         raise_layer {
             display-name = "SYMBOL";
             bindings = <
-&bt BT_NXT       &kp EXCL         &kp AT           &kp HASH         &kp DLLR         &kp PRCNT                                                 &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&bt BT_PRV       &bt BT_CLR       &mkp LCLK        &mkp MCLK        &mkp RCLK        &mkp MB4                                  &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&rgb_ug RGB_TOG  &rgb_ug RGB_SPI  &rgb_ug RGB_SPD  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_COLOR_HSB(185,0,0)  &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
+&bt BT_NXT       &kp EXCLAMATION  &kp AT           &kp HASH         &kp DLLR         &kp PRCNT                                                 &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK     &kp LPAR  &kp RPAR  &kp BSPC
+&bt BT_PRV       &bt BT_CLR       &mkp LCLK        &mkp MCLK        &mkp RCLK        &mkp MB4                                  &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &exclamation  &kp RBKT  &kp BSLH  &kp GRAVE
+&rgb_ug RGB_TOG  &rgb_ug RGB_SPI  &rgb_ug RGB_SPD  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_COLOR_HSB(185,0,0)  &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp LBRC      &kp RBRC  &kp PIPE  &kp TILDE
                                                    &trans           &trans           &kp SPACE                                                                                  &kp RET    &trans     &trans
             >;
 
