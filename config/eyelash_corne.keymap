@@ -56,6 +56,18 @@
             bindings = <&kp RALT &kp N8>;
             label = "EXCLAMATION";
         };
+
+        bracket_open: bracket_open {
+            compatible = "zmk,behavior-macro";
+            label = "Macro: [";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings = 
+                <&macro_press &kp RALT>
+                , <&macro_tap &kp N8>
+                , <&macro_release &kp RALT>;
+        };
     };
 
     keymap {
@@ -89,7 +101,7 @@
             display-name = "SYMBOL";
             bindings = <
 &bt BT_NXT       &kp EXCLAMATION  &kp AT           &kp HASH         &kp DLLR         &kp PRCNT                                                 &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK     &kp LPAR  &kp RPAR  &kp BSPC
-&bt BT_PRV       &bt BT_CLR       &mkp LCLK        &mkp MCLK        &mkp RCLK        &mkp MB4                                  &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &exclamation  &kp RBKT  &kp BSLH  &kp GRAVE
+&bt BT_PRV       &bt BT_CLR       &mkp LCLK        &mkp MCLK        &mkp RCLK        &mkp MB4                                  &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &bracket_open  &kp RBKT  &kp BSLH  &kp GRAVE
 &rgb_ug RGB_TOG  &rgb_ug RGB_SPI  &rgb_ug RGB_SPD  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_COLOR_HSB(185,0,0)  &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp LBRC      &kp RBRC  &kp PIPE  &kp TILDE
                                                    &trans           &trans           &kp SPACE                                                                                  &kp RET    &trans     &trans
             >;
