@@ -68,6 +68,138 @@
                 , <&macro_tap &kp N8>
                 , <&macro_release &kp RALT>;
         };
+
+        macro_excl: macro_excl {
+            compatible = "zmk,behavior-macro";
+            label = "Macro: !";
+            bindings = <&str "!">;
+        };
+
+        macro_at: macro_at {
+            compatible = "zmk,behavior-macro";
+            label = "Macro: @";
+            bindings = <&str "@">;
+        };
+
+        macro_hash: macro_hash {
+            compatible = "zmk,behavior-macro";
+            label = "Macro: #";
+            bindings = <&str "#">;
+        };
+
+        macro_dollar: macro_dollar {
+            compatible = "zmk,behavior-macro";
+            label = "Macro: $";
+            bindings = <&str "$">;
+        };
+
+        macro_percent: macro_percent {
+            compatible = "zmk,behavior-macro";
+            label = "Macro: %";
+            bindings = <&str "%">;
+        };
+
+        macro_caret: macro_caret {
+            compatible = "zmk,behavior-macro";
+            label = "Macro: ^";
+            bindings = <&str "^">;
+        };
+
+        macro_amp: macro_amp {
+            compatible = "zmk,behavior-macro";
+            label = "Macro: &";
+            bindings = <&str "&">;
+        };
+
+        macro_star: macro_star {
+            compatible = "zmk,behavior-macro";
+            label = "Macro: *";
+            bindings = <&str "*">;
+        };
+
+        macro_lpar: macro_lpar {
+            compatible = "zmk,behavior-macro";
+            label = "Macro: (";
+            bindings = <&str "(">;
+        };
+
+        macro_rpar: macro_rpar {
+            compatible = "zmk,behavior-macro";
+            label = "Macro: )";
+            bindings = <&str ")">;
+        };
+
+        macro_minus: macro_minus {
+            compatible = "zmk,behavior-macro";
+            label = "Macro: -";
+            bindings = <&str "-">;
+        };
+
+        macro_equal: macro_equal {
+            compatible = "zmk,behavior-macro";
+            label = "Macro: =";
+            bindings = <&str "=">;
+        };
+
+        macro_lbkt: macro_lbkt {
+            compatible = "zmk,behavior-macro";
+            label = "Macro: [";
+            bindings = <&str "[">;
+        };
+
+        macro_rbkt: macro_rbkt {
+            compatible = "zmk,behavior-macro";
+            label = "Macro: ]";
+            bindings = <&str "]">;
+        };
+
+        macro_bslh: macro_bslh {
+            compatible = "zmk,behavior-macro";
+            label = "Macro: backslash";
+            bindings = <&str "\\">;
+        };
+
+        macro_grave: macro_grave {
+            compatible = "zmk,behavior-macro";
+            label = "Macro: backtick";
+            bindings = <&str "">;
+        };
+
+        macro_under: macro_under {
+            compatible = "zmk,behavior-macro";
+            label = "Macro: _";
+            bindings = <&str "_">;
+        };
+
+        macro_plus: macro_plus {
+            compatible = "zmk,behavior-macro";
+            label = "Macro: +";
+            bindings = <&str "+">;
+        };
+
+        macro_lbrc: macro_lbrc {
+            compatible = "zmk,behavior-macro";
+            label = "Macro: {";
+            bindings = <&str "{">;
+        };
+
+        macro_rbrc: macro_rbrc {
+            compatible = "zmk,behavior-macro";
+            label = "Macro: }";
+            bindings = <&str "}">;
+        };
+
+        macro_pipe: macro_pipe {
+            compatible = "zmk,behavior-macro";
+            label = "Macro: pipe";
+            bindings = <&str "|">;
+        };
+
+        macro_tilde: macro_tilde {
+            compatible = "zmk,behavior-macro";
+            label = "Macro: tilde";
+            bindings = <&str "~">;
+        };
     };
 
     keymap {
