@@ -125,8 +125,8 @@ layers:
   - '&macro_equal'
   - '&macro_lbkt'
   - '&macro_rbkt'
-  - '&macro_bslash'
-  - {t: '`', s: '~'}
+  - '&macro_leftcroc'
+  - macro rightcroc
   - RGB TOG
   - RGB SPI
   - RGB SPD
