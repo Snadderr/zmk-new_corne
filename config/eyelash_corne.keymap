@@ -67,6 +67,14 @@
             tap-ms = <40>;
             bindings = <&macro_press &kp RIGHT_ALT>, <&macro_tap &kp N2>, <&macro_release &kp RIGHT_ALT>;
         };
+        macro_quote: macro_quote {
+            compatible = "zmk,behavior-macro";
+            label = "macro_at";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings = <&macro_press &kp LEFT_SHIFT>, <&macro_tap &kp N2>, <&macro_release &kp LEFT_SHIFT>;
+        };
 
         macro_hash: macro_hash {
             compatible = "zmk,behavior-macro";
@@ -290,7 +298,7 @@
             display-name = "SYMBOL";
             bindings = <
                 &kp TAB       &macro_excl      &macro_at       &macro_hash     &macro_dollar   &macro_percent                                             &mmv MOVE_UP                    &macro_caret &macro_amp   &macro_star   &macro_lpar &macro_rpar &kp BSPC
-                &kp LEFT_SHIFT       &bt BT_CLR       &mkp LCLK       &mkp MCLK       &mkp RCLK       &mkp MB4                                  &mmv MOVE_LEFT  &mkp LCLK   &mmv MOVE_RIGHT      &macro_minus &macro_equal &macro_lbkt  &macro_rbkt &macro_leftcroc &macro_rightcroc
+                &kp LEFT_SHIFT       &bt BT_CLR       &bt BT_NXT       &bt BT_PRV       &macro_quote       &kp NON_US_HASH                               &mmv MOVE_LEFT  &mkp LCLK   &mmv MOVE_RIGHT      &macro_minus &macro_equal &macro_lbkt  &macro_rbkt &macro_leftcroc &macro_rightcroc
                 &rgb_ug RGB_TOG &rgb_ug RGB_SPI  &rgb_ug RGB_SPD &rgb_ug RGB_EFF &rgb_ug RGB_EFR &rgb_ug RGB_COLOR_HSB(185,0,0)  &trans         &mmv MOVE_DOWN                               &macro_question &macro_plus &macro_lbrace &macro_rbrace &macro_pipe &macro_under
                                                 &trans           &trans           &kp SPACE                                                                     &kp RET    &trans     &trans
             >;
