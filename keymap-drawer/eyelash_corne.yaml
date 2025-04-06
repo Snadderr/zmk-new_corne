@@ -91,7 +91,7 @@ layers:
   - $$mdi:arrow-up-bold$$
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-right-bold$$
-  - PG DN
+  - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -99,7 +99,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   SYMBOL:
-  - {h: '$$mdi:arrow-down-bold$$', s: '$$mdi:bluetooth-connect$$'}
+  - $$mdi:keyboard-tab$$
   - '&macro_excl'
   - '&macro_at'
   - '&macro_hash'
@@ -112,7 +112,7 @@ layers:
   - '&macro_lpar'
   - '&macro_rpar'
   - {t: '$$mdi:backspace$$', type: backspace}
-  - {h: '$$mdi:arrow-up-bold$$', s: '$$mdi:bluetooth-connect$$'}
+  - $$mdi:apple-keyboard-shift$$
   - $$mdi:bluetooth-off$$
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:mouse-scroll-wheel$$
