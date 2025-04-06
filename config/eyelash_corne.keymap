@@ -101,7 +101,7 @@
             #binding-cells = <0>;
             wait-ms = <40>;
             tap-ms = <40>;
-            bindings = <&macro_press &kp LEFT_SHIFT>, <&macro_tap &kp NON_US_HASH>, <&macro_release &kp LEFT_SHIFT>;
+            bindings = <&macro_press &kp LEFT_SHIFT>, <&macro_tap &kp SQT>, <&macro_release &kp LEFT_SHIFT>;
         };
 
         macro_amp: macro_amp {
@@ -270,7 +270,7 @@
             bindings = <
 &trans  &kp F1        &kp F2           &kp F3        &kp F4        &kp F5                                  &mmv MOVE_UP                     &kp F6        &kp F7          &kp F8        &kp F9          &kp F10          &kp F11
 &trans  &kp NUMBER_1  &kp NUMBER_2     &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp NUMBER_6  &kp NUMBER_7    &kp NUMBER_8  &kp NUMBER_9    &kp NUMBER_0     &kp F12
-&trans  &trans        &kp KP_MULTIPLY  &kp SLASH     &kp MINUS     &kp PLUS      &trans                    &mmv MOVE_DOWN                   &trans        &kp DOWN_ARROW  &kp UP_ARROW  &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp PG_DN
+&trans  &trans        &kp KP_MULTIPLY  &kp SLASH     &kp MINUS     &kp PLUS      &trans                    &mmv MOVE_DOWN                   &trans        &kp DOWN_ARROW  &kp UP_ARROW  &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp RIGHT_ALT
                                        &trans        &trans        &trans                                                                   &trans        &trans          &trans
             >;
 
@@ -280,8 +280,8 @@
         raise_layer {
             display-name = "SYMBOL";
             bindings = <
-                &bt BT_NXT       &macro_excl      &macro_at       &macro_hash     &macro_dollar   &macro_percent                                             &mmv MOVE_UP                    &macro_caret &macro_amp   &macro_star   &macro_lpar &macro_rpar &kp BSPC
-                &bt BT_PRV       &bt BT_CLR       &mkp LCLK       &mkp MCLK       &mkp RCLK       &mkp MB4                                  &mmv MOVE_LEFT  &mkp LCLK   &mmv MOVE_RIGHT      &macro_minus &macro_equal &macro_lbkt  &macro_rbkt &macro_bslash &kp GRAVE
+                &kp TAB       &macro_excl      &macro_at       &macro_hash     &macro_dollar   &macro_percent                                             &mmv MOVE_UP                    &macro_caret &macro_amp   &macro_star   &macro_lpar &macro_rpar &kp BSPC
+                &kp LEFT_SHIFT       &bt BT_CLR       &mkp LCLK       &mkp MCLK       &mkp RCLK       &mkp MB4                                  &mmv MOVE_LEFT  &mkp LCLK   &mmv MOVE_RIGHT      &macro_minus &macro_equal &macro_lbkt  &macro_rbkt &macro_bslash &kp GRAVE
                 &rgb_ug RGB_TOG &rgb_ug RGB_SPI  &rgb_ug RGB_SPD &rgb_ug RGB_EFF &rgb_ug RGB_EFR &rgb_ug RGB_COLOR_HSB(185,0,0)  &trans         &mmv MOVE_DOWN                               &macro_question &macro_plus &macro_lbrace &macro_rbrace &macro_pipe &macro_under
                                                 &trans           &trans           &kp SPACE                                                                     &kp RET    &trans     &trans
             >;
