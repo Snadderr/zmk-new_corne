@@ -83,7 +83,7 @@
             #binding-cells = <0>;
             wait-ms = <40>;
             tap-ms = <40>;
-            bindings = <&macro_press &kp LEFT_SHIFT>, <&macro_tap &kp N4>, <&macro_release &kp LEFT_SHIFT>;
+            bindings = <&macro_press &kp RIGHT_ALT>, <&macro_tap &kp N4>, <&macro_release &kp RIGHT_ALT>;
         };
 
         macro_percent: macro_percent {
@@ -101,7 +101,7 @@
             #binding-cells = <0>;
             wait-ms = <40>;
             tap-ms = <40>;
-            bindings = <&macro_press &kp LEFT_SHIFT>, <&macro_tap &kp N6>, <&macro_release &kp LEFT_SHIFT>;
+            bindings = <&macro_press &kp LEFT_SHIFT>, <&macro_tap &kp NON_US_HASH>, <&macro_tap &kp NON_US_HASH>, <&macro_release &kp LEFT_SHIFT>;
         };
 
         macro_amp: macro_amp {
@@ -119,7 +119,7 @@
             #binding-cells = <0>;
             wait-ms = <40>;
             tap-ms = <40>;
-            bindings = <&macro_press &kp LEFT_SHIFT>, <&macro_tap &kp PLUS>, <&macro_release &kp LEFT_SHIFT>;
+            bindings = <&macro_press &kp LEFT_SHIFT>, <&macro_tap &kp SQT>, <&macro_release &kp LEFT_SHIFT>;
         };
 
         macro_lpar: macro_lpar {
@@ -144,14 +144,16 @@
             compatible = "zmk,behavior-macro";
             label = "macro_minus";
             #binding-cells = <0>;
-            bindings = <&kp MINUS>;
+            bindings = <&kp SLASH>;
         };
 
         macro_equal: macro_equal {
             compatible = "zmk,behavior-macro";
             label = "macro_equal";
             #binding-cells = <0>;
-            bindings = <&kp EQUAL>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings = <&macro_press &kp LEFT_SHIFT>,<&macro_tap &kp N0>, <&macro_release &kp LEFT_SHIFT>;
         };
 
         macro_lbkt: macro_lbkt {
@@ -178,7 +180,7 @@
             #binding-cells = <0>;
             wait-ms = <40>;
             tap-ms = <40>;
-            bindings = <&macro_press &kp RIGHT_ALT>, <&macro_tap &kp M>, <&macro_release &kp RIGHT_ALT>;
+            bindings = <&kp NON_US_BACKSLASH>;
         };
 
         macro_squote: macro_squote {
@@ -192,14 +194,14 @@
             compatible = "zmk,behavior-macro";
             label = "macro_under";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LEFT_SHIFT>, <&macro_tap &kp MINUS>, <&macro_release &kp LEFT_SHIFT>;
+            bindings = <&macro_press &kp LEFT_SHIFT>, <&macro_tap &kp SLASH>, <&macro_release &kp LEFT_SHIFT>;
         };
 
         macro_plus: macro_plus {
             compatible = "zmk,behavior-macro";
             label = "macro_plus";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LEFT_SHIFT>, <&macro_tap &kp EQUAL>, <&macro_release &kp LEFT_SHIFT>;
+            bindings = <&kp PLUSS>;
         };
 
         macro_lbrace: macro_lbrace {
@@ -226,12 +228,21 @@
             #binding-cells = <0>;
             wait-ms = <40>;
             tap-ms = <40>;
-            bindings = <&macro_press &kp RIGHT_ALT>, <&macro_tap &kp NON_US_BACKSLASH>, <&macro_release &kp RIGHT_ALT>;
+            bindings = <&macro_tap &kp TILDE>;
         };
 
         macro_tilde: macro_tilde {
             compatible = "zmk,behavior-macro";
             label = "macro_tilde";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings = <&macro_press &kp LEFT_SHIFT>, <&macro_tap &kp MINUS>, <&macro_release &kp LEFT_SHIFT>;
+        };
+        
+        macro_question: macro_question {
+            compatible = "zmk,behavior-macro";
+            label = "macro_question";
             #binding-cells = <0>;
             wait-ms = <40>;
             tap-ms = <40>;
@@ -271,7 +282,7 @@
             bindings = <
                 &bt BT_NXT       &macro_excl      &macro_at       &macro_hash     &macro_dollar   &macro_percent                                             &mmv MOVE_UP                    &macro_caret &macro_amp   &macro_star   &macro_lpar &macro_rpar &kp BSPC
                 &bt BT_PRV       &bt BT_CLR       &mkp LCLK       &mkp MCLK       &mkp RCLK       &mkp MB4                                  &mmv MOVE_LEFT  &mkp LCLK   &mmv MOVE_RIGHT      &macro_minus &macro_equal &macro_lbkt  &macro_rbkt &macro_bslash &kp GRAVE
-                &rgb_ug RGB_TOG &rgb_ug RGB_SPI  &rgb_ug RGB_SPD &rgb_ug RGB_EFF &rgb_ug RGB_EFR &rgb_ug RGB_COLOR_HSB(185,0,0)  &trans         &mmv MOVE_DOWN                               &macro_under &macro_plus &macro_lbrace &macro_rbrace &macro_pipe &macro_tilde
+                &rgb_ug RGB_TOG &rgb_ug RGB_SPI  &rgb_ug RGB_SPD &rgb_ug RGB_EFF &rgb_ug RGB_EFR &rgb_ug RGB_COLOR_HSB(185,0,0)  &trans         &mmv MOVE_DOWN                               &macro_question &macro_plus &macro_lbrace &macro_rbrace &macro_pipe &macro_under
                                                 &trans           &trans           &kp SPACE                                                                     &kp RET    &trans     &trans
             >;
 
