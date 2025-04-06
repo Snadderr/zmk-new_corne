@@ -100,17 +100,17 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   SYMBOL:
   - {h: '$$mdi:arrow-down-bold$$', s: '$$mdi:bluetooth-connect$$'}
-  - '!'
-  - '@'
-  - '#'
-  - $
-  - '%'
+  - '&macro_excl'
+  - '&macro_at'
+  - '&macro_hash'
+  - '&macro_dollar'
+  - '&macro_percent'
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
-  - ^
-  - '&'
-  - '*'
-  - (
-  - )
+  - '&macro_caret'
+  - '&macro_amp'
+  - '&macro_star'
+  - '&macro_lpar'
+  - '&macro_rpar'
   - {t: '$$mdi:backspace$$', type: backspace}
   - {h: '$$mdi:arrow-up-bold$$', s: '$$mdi:bluetooth-connect$$'}
   - $$mdi:bluetooth-off$$
@@ -121,11 +121,11 @@ layers:
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-  - {t: '-', s: _}
-  - {t: '=', s: +}
+  - '&macro_minus'
+  - '&macro_equal'
   - '&macro_lbkt'
-  - {t: ']', s: '}'}
-  - {t: \, s: '|'}
+  - '&macro_rbkt'
+  - '&macro_bslash'
   - {t: '`', s: '~'}
   - RGB TOG
   - RGB SPI
@@ -135,12 +135,12 @@ layers:
   - RGB COLOR HSB(185,0,0)
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - _
-  - +
-  - '{'
-  - '}'
-  - '|'
-  - '~'
+  - '&macro_under'
+  - '&macro_plus'
+  - '&macro_lbrace'
+  - '&macro_rbrace'
+  - '&macro_pipe'
+  - '&macro_tilde'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:keyboard-space$$
