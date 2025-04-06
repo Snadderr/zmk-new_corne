@@ -126,7 +126,7 @@ layers:
   - '&macro_lbkt'
   - '&macro_rbkt'
   - '&macro_leftcroc'
-  - macro rightcroc
+  - '&macro_rightcroc'
   - RGB TOG
   - RGB SPI
   - RGB SPD
