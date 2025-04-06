@@ -135,12 +135,12 @@ layers:
   - RGB COLOR HSB(185,0,0)
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - '&macro_under'
+  - '&macro_question'
   - '&macro_plus'
   - '&macro_lbrace'
   - '&macro_rbrace'
   - '&macro_pipe'
-  - '&macro_tilde'
+  - '&macro_under'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:keyboard-space$$
