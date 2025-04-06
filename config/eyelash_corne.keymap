@@ -101,7 +101,7 @@
             #binding-cells = <0>;
             wait-ms = <40>;
             tap-ms = <40>;
-            bindings = <&macro_press &kp LEFT_SHIFT>, <&macro_tap &kp SQT>, <&macro_release &kp LEFT_SHIFT>;
+            bindings = <&macro_press &kp LEFT_SHIFT>, <&macro_tap &kp RBKT>, <&macro_tap &kp RBKT>, <&macro_release &kp LEFT_SHIFT>;
         };
 
         macro_amp: macro_amp {
@@ -174,13 +174,22 @@
             bindings = <&macro_press &kp RIGHT_ALT>, <&macro_tap &kp N9>, <&macro_release &kp RIGHT_ALT>;
         };
 
-        macro_bslash: macro_bslash {
+        macro_leftcroc: macro_leftcroc {
             compatible = "zmk,behavior-macro";
             label = "macro_bslash";
             #binding-cells = <0>;
             wait-ms = <40>;
             tap-ms = <40>;
             bindings = <&kp NON_US_BACKSLASH>;
+        };
+
+        macro_rightcroc: macro_rightcroc {
+            compatible = "zmk,behavior-macro";
+            label = "macro_bslash";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings = <&macro_press &kp LEFT_SHIFT>, <&macro_tap &kp NON_US_BACKSLASH>, <&macro_release &kp LEFT_SHIFT>;
         };
 
         macro_squote: macro_squote {
@@ -201,7 +210,7 @@
             compatible = "zmk,behavior-macro";
             label = "macro_plus";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LEFT_SHIFT>, <&kp EQUAL>, <&macro_release &kp LEFT_SHIFT>;
+            bindings = <&macro_press &kp LEFT_SHIFT>, <&kp MINUS>, <&macro_release &kp LEFT_SHIFT>;
         };
 
         macro_lbrace: macro_lbrace {
@@ -281,7 +290,7 @@
             display-name = "SYMBOL";
             bindings = <
                 &kp TAB       &macro_excl      &macro_at       &macro_hash     &macro_dollar   &macro_percent                                             &mmv MOVE_UP                    &macro_caret &macro_amp   &macro_star   &macro_lpar &macro_rpar &kp BSPC
-                &kp LEFT_SHIFT       &bt BT_CLR       &mkp LCLK       &mkp MCLK       &mkp RCLK       &mkp MB4                                  &mmv MOVE_LEFT  &mkp LCLK   &mmv MOVE_RIGHT      &macro_minus &macro_equal &macro_lbkt  &macro_rbkt &macro_bslash &kp GRAVE
+                &kp LEFT_SHIFT       &bt BT_CLR       &mkp LCLK       &mkp MCLK       &mkp RCLK       &mkp MB4                                  &mmv MOVE_LEFT  &mkp LCLK   &mmv MOVE_RIGHT      &macro_minus &macro_equal &macro_lbkt  &macro_rbkt &macro_leftcroc &kp macro_rightcroc
                 &rgb_ug RGB_TOG &rgb_ug RGB_SPI  &rgb_ug RGB_SPD &rgb_ug RGB_EFF &rgb_ug RGB_EFR &rgb_ug RGB_COLOR_HSB(185,0,0)  &trans         &mmv MOVE_DOWN                               &macro_question &macro_plus &macro_lbrace &macro_rbrace &macro_pipe &macro_under
                                                 &trans           &trans           &kp SPACE                                                                     &kp RET    &trans     &trans
             >;
