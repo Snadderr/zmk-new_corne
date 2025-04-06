@@ -201,7 +201,7 @@
             compatible = "zmk,behavior-macro";
             label = "macro_plus";
             #binding-cells = <0>;
-            bindings = <&kp PLUSS>;
+            bindings = <&macro_tap &kp PLUS>;
         };
 
         macro_lbrace: macro_lbrace {
