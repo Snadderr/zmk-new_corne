@@ -68,137 +68,125 @@
                 , <&macro_tap &kp N8>
                 , <&macro_release &kp RALT>;
         };
-
+    
         macro_excl: macro_excl {
             compatible = "zmk,behavior-macro";
-            label = "Macro: !";
-            bindings = <&str "!">;
+            label = "macro_excl";
+            bindings = <&kp LEFT_SHIFT &kp N1>;
         };
 
         macro_at: macro_at {
             compatible = "zmk,behavior-macro";
-            label = "Macro: @";
-            bindings = <&str "@">;
+            label = "macro_at";
+            bindings = <&kp RIGHT_ALT &kp N2>;
         };
 
         macro_hash: macro_hash {
             compatible = "zmk,behavior-macro";
-            label = "Macro: #";
-            bindings = <&str "#">;
+            label = "macro_hash";
+            bindings = <&kp LEFT_SHIFT &kp N3>;
         };
 
         macro_dollar: macro_dollar {
             compatible = "zmk,behavior-macro";
-            label = "Macro: $";
-            bindings = <&str "$">;
+            label = "macro_dollar";
+            bindings = <&kp LEFT_SHIFT &kp N4>;
         };
 
         macro_percent: macro_percent {
             compatible = "zmk,behavior-macro";
-            label = "Macro: %";
-            bindings = <&str "%">;
+            label = "macro_percent";
+            bindings = <&kp LEFT_SHIFT &kp N5>;
         };
 
         macro_caret: macro_caret {
             compatible = "zmk,behavior-macro";
-            label = "Macro: ^";
-            bindings = <&str "^">;
+            label = "macro_caret";
+            bindings = <&kp LEFT_SHIFT &kp N6>;
         };
 
         macro_amp: macro_amp {
             compatible = "zmk,behavior-macro";
-            label = "Macro: &";
-            bindings = <&str "&">;
+            label = "macro_amp";
+            bindings = <&kp LEFT_SHIFT &kp N7>;
         };
 
         macro_star: macro_star {
             compatible = "zmk,behavior-macro";
-            label = "Macro: *";
-            bindings = <&str "*">;
+            label = "macro_star";
+            bindings = <&kp LEFT_SHIFT &kp PLUS>;
         };
 
         macro_lpar: macro_lpar {
             compatible = "zmk,behavior-macro";
-            label = "Macro: (";
-            bindings = <&str "(">;
+            label = "macro_lpar";
+            bindings = <&kp LEFT_SHIFT &kp N8>;
         };
 
         macro_rpar: macro_rpar {
             compatible = "zmk,behavior-macro";
-            label = "Macro: )";
-            bindings = <&str ")">;
+            label = "macro_rpar";
+            bindings = <&kp LEFT_SHIFT &kp N9>;
         };
 
         macro_minus: macro_minus {
             compatible = "zmk,behavior-macro";
-            label = "Macro: -";
-            bindings = <&str "-">;
+            label = "macro_minus";
+            bindings = <&kp MINUS>;
         };
 
         macro_equal: macro_equal {
             compatible = "zmk,behavior-macro";
-            label = "Macro: =";
-            bindings = <&str "=">;
+            label = "macro_equal";
+            bindings = <&kp EQUAL>;
         };
 
         macro_lbkt: macro_lbkt {
             compatible = "zmk,behavior-macro";
-            label = "Macro: [";
-            bindings = <&str "[">;
+            label = "macro_lbkt";
+            bindings = <&kp RIGHT_ALT &kp N8>;
         };
 
         macro_rbkt: macro_rbkt {
             compatible = "zmk,behavior-macro";
-            label = "Macro: ]";
-            bindings = <&str "]">;
+            label = "macro_rbkt";
+            bindings = <&kp RIGHT_ALT &kp N9>;
         };
 
-        macro_bslh: macro_bslh {
+        macro_bslash: macro_bslash {
             compatible = "zmk,behavior-macro";
-            label = "Macro: backslash";
-            bindings = <&str "\\">;
+            label = "macro_bslash";
+            bindings = <&kp RIGHT_ALT &kp M>;
         };
 
-        macro_grave: macro_grave {
+        macro_squote: macro_squote {
             compatible = "zmk,behavior-macro";
-            label = "Macro: backtick";
-            bindings = <&str "">;
+            label = "macro_squote";
+            bindings = <&kp SQT>;
         };
 
         macro_under: macro_under {
             compatible = "zmk,behavior-macro";
-            label = "Macro: _";
-            bindings = <&str "_">;
+            label = "macro_under";
+            bindings = <&kp LEFT_SHIFT &kp MINUS>;
         };
 
         macro_plus: macro_plus {
             compatible = "zmk,behavior-macro";
-            label = "Macro: +";
-            bindings = <&str "+">;
+            label = "macro_plus";
+            bindings = <&kp LEFT_SHIFT &kp EQUAL>;
         };
 
-        macro_lbrc: macro_lbrc {
+        macro_lbrace: macro_lbrace {
             compatible = "zmk,behavior-macro";
-            label = "Macro: {";
-            bindings = <&str "{">;
+            label = "macro_lbrace";
+            bindings = <&kp RIGHT_ALT &kp N7>;
         };
 
-        macro_rbrc: macro_rbrc {
+        macro_rbrace: macro_rbrace {
             compatible = "zmk,behavior-macro";
-            label = "Macro: }";
-            bindings = <&str "}">;
-        };
-
-        macro_pipe: macro_pipe {
-            compatible = "zmk,behavior-macro";
-            label = "Macro: pipe";
-            bindings = <&str "|">;
-        };
-
-        macro_tilde: macro_tilde {
-            compatible = "zmk,behavior-macro";
-            label = "Macro: tilde";
-            bindings = <&str "~">;
+            label = "macro_rbrace";
+            bindings = <&kp RIGHT_ALT &kp N0>;
         };
     };
 
